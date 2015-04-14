@@ -1,7 +1,7 @@
 {
   "name": "jive-persistence-sqlite",
   "description": "Sqlite persistence strategy for jive-sdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "./sqlite-dynamic.js",
   "author": "Jive Software <jivedev@jivesoftware>",
   "dependencies": {
