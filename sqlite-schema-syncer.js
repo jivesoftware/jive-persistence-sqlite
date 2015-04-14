@@ -129,6 +129,12 @@ function syncTable( table, dropIfExists, force ) {
     if ( !tableAttrs['_id'] ) {
         tableAttrs['_id'] = { type: "text", required: true, index: false, unqiue: true };
     }
+    for ( var key in tableAttrs ) {
+        if ( tableAttrs.hasOwnProperty(key) ) {
+            var value = tableAttrs[key];
+            value.index = false;
+        }
+    }
 
     registerTable.call( self, collectionID, tableAttrs);
 

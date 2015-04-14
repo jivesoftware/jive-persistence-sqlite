@@ -65,7 +65,7 @@ SqliteClient.prototype.query = function(sql, values) {
                         // success
                         // set the rowCount value
                         self.result = {
-                            rowCount : this.changes
+                            rowCount : this.changes > 0 ? this.changes : 0
                         };
                         p.resolve(self);
                     }
